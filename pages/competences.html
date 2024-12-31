@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- style -->
+    <link rel="stylesheet" href="../css/accueil.css">
+
+</head>
+<body>
+    <main>
+        <!-- Header -->
+        <header>
+            <nav>
+                <a href="../index.html">Accueil</a>
+                <a href="../pages/cv.html">CV</a>
+                <a href="../pages/portfolio.html">Portfolio</a>
+                <a href="../pages/contact.html">Contact</a>
+                <a href="../pages/competences.html">Compétences</a>
+                <div id="button-row-responsive">
+                    <a href="https://github.com/YasserYr1" target="_blank" id="github">
+                        <i class="fa-brands fa-github"></i>
+                        Github
+                    </a>
+                    <a href="https://www.linkedin.com/in/yasser-elkhattab-9a3509244/" target="_blank" id="linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </div>
+            </nav>
+
+            <a href="../index.html" class="logo">YR</a>
+
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+            <div id="button-row">
+                <a href="https://github.com/YasserYr1" target="_blank" id="github">
+                    <i class="fa-brands fa-github"></i>
+                    Github
+                </a>
+                <a href="https://www.linkedin.com/in/yasser-elkhattab-9a3509244/" target="_blank" id="linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                    LinkedIn
+                </a>
+            </div>
+        </header>
+
+        <!-- Contact sectio -->
+        <section id="competence-section">
+            <h2>Gestion des compétences</h2>
+            
+            <div id="competence-container">
+                <form id="ajout-competence">
+                    <h3 id="competence-titre">Ajouter une compétence</h3>
+                    <input type="text" name="nomCompetence" id="nomCompetence" placeholder="Nom de compétence">
+                    <p id="error-nom"></p>
+
+                    <select name="choix" id="choix">
+                        <option value="">Niveau de compétence</option>
+                        <option value="Débutant">Débutant</option>
+                        <option value="Intermédiaire">Intermédiaire</option>
+                        <option value="Avancé">Avancé</option>
+                    </select>
+                    <p id="error-niveau"></p>
+
+                    <textarea name="description" id="description" rows="10" placeholder="Description de la compétence (facultative)"></textarea>
+
+                    <button id="ajouter">Ajouter</button>
+                </form>
+
+                <div id="affiche-competence">
+                    <h3 id="competence-titre">Liste des compétence</h3>
+                    <ul id="affichage">
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p class="copyright">&copy; All Rights Reserved | Yasser El Khattab</p>
+        </footer>
+    </main>
+
+    <!-- Javascript -->
+    <script src="../js/responsive.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>
