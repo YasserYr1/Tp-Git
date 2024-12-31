@@ -276,9 +276,10 @@ button, #linkedin, #github {
 #projetsContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
     gap: 2rem;
+    
 }
 
 .card {
