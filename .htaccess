@@ -1,8 +1,21 @@
-# Réécriture des URLs
+# Activer le moteur de réécriture
 RewriteEngine On
+
+# Enlever .html
+RewriteCond %{THE_REQUEST} \s/([^\s]+)\.html
+RewriteRule ^ /%1 [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteRule ^(.*)$ index.html [L]
 
-# Gestion des erreurs
+# Page 404
 ErrorDocument 404 /404.html
+
+# Désactiver l'indexation des répertoires
+Options -Indexes
+
+# Sécurité : Empêcher l'accès direct aux fichiers PHP
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
